@@ -16,4 +16,7 @@ migrateforce1:
 dropdb:
 	sudo docker exec -it backend-master dropdb --username=root --owner=root simple_bank
 
-.PHONY: postgres createdb dropdb migrateup migratedown
+sqlc:
+	sqlc generate
+
+.PHONY: postgres createdb dropdb migrateup migratedown sqlc
